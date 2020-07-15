@@ -15,7 +15,9 @@ class Sales_data
 
 public:
     Sales_data() = default;
-    explicit Sales_data(const std::string &s) : book_no(s){}
+    explicit Sales_data(const std::string &s) : book_no(s){
+        std::cout << "Sales_data(const std::string &s)" << std::endl;
+    }
     Sales_data(const std::string &s, unsigned n, double p) : book_no(s), units_sold(n), revenue(p*n){}
     Sales_data(std::istream &is);
 

@@ -6,6 +6,8 @@
 void rwSalesData();
 //操作类
 void OperateWindow();
+//隐式转换
+void explicitFunction();
 
 int main() {
     std::cout << "Hello, main!" << std::endl;
@@ -13,7 +15,8 @@ int main() {
 //    Sales_data salesData;
 //    salesData.to_string();
 
-    OperateWindow();
+//    OperateWindow();
+    explicitFunction();
 
     return 0;
 }
@@ -43,4 +46,10 @@ void OperateWindow() {
     std::cout << "index2:" << index1 << std::endl;
     auto screen_1 = windowMgr.getScreen(index1);
     screen_1.display(std::cout);
+}
+
+void explicitFunction() {
+    Sales_data data("9999");
+    data.combine(Sales_data("9999"));
+    data.to_string();
 }

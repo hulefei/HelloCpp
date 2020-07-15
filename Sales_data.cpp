@@ -12,6 +12,7 @@ Sales_data::Sales_data(std::istream& is)
 
 Sales_data& Sales_data::combine(const Sales_data &rhs)
 {
+    std::cout << "in combine" << std::endl;
     units_sold += rhs.units_sold;
     revenue += rhs.revenue;
     return *this;
